@@ -84,10 +84,10 @@ constraints = [
 ]
 
 # Print the sum
-st.text("  ", ''.join(input1))
-st.text("+ ", ''.join(input2))
+st.text(''.join(input1))
+st.text(''.join(input2))
 st.text("--------")
-st.text("  ", ''.join(input3))
+st.text(''.join(input3))
 
 problem = CspProblem(unique_variables, domains, constraints)
 
@@ -119,7 +119,7 @@ if output:
                 variable3_value += str(variable_value)
             
     # Print the solution
-    st.text("  ", variable1_value)
-    st.text("+ ", variable2_value)
+    st.text(variable1_value)
+    st.text(variable2_value)
     st.text("--------")
-    st.text("  ", variable3_value)
+    st.text(variable3_value)
