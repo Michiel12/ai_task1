@@ -92,7 +92,7 @@ st.text(''.join(input3))
 problem = CspProblem(unique_variables, domains, constraints)
 
 output = backtrack(problem)
-solution = '\nSolutions:', output
+solution = '\nSolutions: '+str(output)
 st.text(solution)
 
 # Define the input string
