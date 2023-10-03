@@ -106,7 +106,7 @@ if button and input3:
     output = backtrack(problem)
     if input3:
         if output:
-            st.write("Solution: "+output)
+            st.write("Solution: "+str(output))
         else:
             st.text("No possible solution")
 
