@@ -20,8 +20,7 @@ def remove_duplicates(variables):
             unique_variables.append(letter)
     return unique_variables
 
-# Remove all the duplicated by calling the fuction I made earlier
-unique_variables = remove_duplicates(variables)
+
 
 # Function that returns the list of the index of each letter in de list of letters (unique_variables)
 def letter_positions_in_order(word, unique_variables):
@@ -36,10 +35,7 @@ def letter_positions_in_order(word, unique_variables):
     
     return letter_positions
 
-# Calls the above function "letter_positions_in_order" to
-result1 = letter_positions_in_order(input1, unique_variables)
-result2 = letter_positions_in_order(input2, unique_variables)
-result3 = letter_positions_in_order(input3, unique_variables)
+
 
 # Generates the right domain for each letter in the tuple
 def generate_domains(unique_variables, input1, input2, input3):
@@ -51,9 +47,6 @@ def generate_domains(unique_variables, input1, input2, input3):
         else:
             domain_dict[letter] = list(range(0, 10))
     return domain_dict
-
-# Call the function to generate the domains
-domains = generate_domains(unique_variables, input1, input2, input3)
 
 def constraint_unique(variables, values):
     return len(values) == len(set(values))  # Remove repeated values and count
@@ -82,6 +75,17 @@ def constraint_add(variables, values):
 button = st.button("Test words")
 
 if button:
+    # Remove all the duplicated by calling the fuction I made earlier
+    unique_variables = remove_duplicates(variables)
+    
+    # Calls the above function "letter_positions_in_order" to
+    result1 = letter_positions_in_order(input1, unique_variables)
+    result2 = letter_positions_in_order(input2, unique_variables)
+    result3 = letter_positions_in_order(input3, unique_variables)
+
+    # Call the function to generate the domains
+    domains = generate_domains(unique_variables, input1, input2, input3)
+    
     # Make the contraint
     constraints = [
         (unique_variables, constraint_unique),
