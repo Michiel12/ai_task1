@@ -135,8 +135,9 @@ if button and input3:
                     variable3_value += str(variable_value)
             
         # Print the solution
-        st.markdown(f'<pre>{"&nbsp;" + variable1_value}</pre>', unsafe_allow_html=True)
+        st.markdown(f'<pre>{"&nbsp;&nbsp;" + variable1_value}</pre>', unsafe_allow_html=True)
         st.text("  "+variable1_value)
         st.text("+ "+variable2_value)
         st.text("------")
+        st.markdown(f'<pre>{"&nbsp;&nbsp;" + variable3_value}</pre>', unsafe_allow_html=True)
         st.text("  "+variable3_value)
