@@ -1,9 +1,13 @@
 from simpleai.search import CspProblem, backtrack
+import streamlit as st
+
+# Set the title of your app
+st.title("My First Streamlit App")
 
 # Get user input and store it in a tuple
-input1 = tuple(input("First word: ").upper())
-input2 = tuple(input("Second word: ").upper())
-input3 = tuple(input("Third word: ").upper())
+input1 = tuple(st.text_input("First word: ").upper())
+input2 = tuple(st.text_input("Second word: ").upper())
+input3 = tuple(st.text_input("Third word: ").upper())
 # Make 1 tuple with all letters
 variables = input1+input2+input3
 
