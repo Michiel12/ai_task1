@@ -77,15 +77,16 @@ def constraint_add(variables, values):
     
     return (word1int + word2int) == resultint
 
-# Make the contraint
-constraints = [
-    (unique_variables, constraint_unique),
-    (unique_variables, constraint_add),
-]
+
 
 button = st.button("Test words")
 
 if button:
+    # Make the contraint
+    constraints = [
+        (unique_variables, constraint_unique),
+        (unique_variables, constraint_add),
+    ]
 
     if input3:
         # Print the sum
