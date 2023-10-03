@@ -84,15 +84,15 @@ constraints = [
 ]
 
 # Print the sum
-print("  ", ''.join(input1))
-print("+ ", ''.join(input2))
-print("--------")
-print("  ", ''.join(input3))
+st.text("  ", ''.join(input1))
+st.text("+ ", ''.join(input2))
+st.text("--------")
+st.text("  ", ''.join(input3))
 
 problem = CspProblem(unique_variables, domains, constraints)
 
 output = backtrack(problem)
-print('\nSolutions:', output)
+st.text('\nSolutions:', output)
 
 # Define the input string
 input_string = ''.join(input1)+" "+''.join(input2)+" "+''.join(input3)
@@ -119,7 +119,7 @@ if output:
                 variable3_value += str(variable_value)
             
     # Print the solution
-    print("  ", variable1_value)
-    print("+ ", variable2_value)
-    print("--------")
-    print("  ", variable3_value)
+    st.text("  ", variable1_value)
+    st.text("+ ", variable2_value)
+    st.text("--------")
+    st.text("  ", variable3_value)
