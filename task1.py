@@ -2,7 +2,7 @@ from simpleai.search import CspProblem, backtrack
 import streamlit as st
 
 # Set the title of your app
-st.title("My First Streamlit App")
+st.title("AI task 1 by Michiel Van Loy")
 
 # Get user input and store it in a tuple
 input1 = tuple(st.text_input("First word: ").upper())
@@ -93,7 +93,8 @@ if input3:
 problem = CspProblem(unique_variables, domains, constraints)
 
 output = backtrack(problem)
-st.text("solution: "+output)
+st.text("Solution:")
+st.text(output)
 
 # Define the input string
 input_string = ''.join(input1)+" "+''.join(input2)+" "+''.join(input3)
