@@ -83,11 +83,12 @@ constraints = [
     (unique_variables, constraint_add),
 ]
 
-# Print the sum
-st.text(''.join(input1))
-st.text(''.join(input2))
-st.text("--------")
-st.text(''.join(input3))
+if input3:
+    # Print the sum
+    st.text(''.join(input1))
+    st.text(''.join(input2))
+    st.text("--------")
+    st.text(''.join(input3))
 
 problem = CspProblem(unique_variables, domains, constraints)
 
