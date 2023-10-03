@@ -73,7 +73,7 @@ def constraint_add(variables, values):
 
 button = st.button("Test words")
 
-if button:
+if button and input3:
     # Make 1 tuple with all letters
     variables = input1+input2+input3
 
