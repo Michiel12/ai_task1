@@ -83,49 +83,53 @@ constraints = [
     (unique_variables, constraint_add),
 ]
 
-if input3:
-    # Print the sum
-    st.text(''.join(input1))
-    st.text(''.join(input2))
-    st.text("+ ------")
-    st.text(''.join(input3))
+button = st.button("Test words")
 
-problem = CspProblem(unique_variables, domains, constraints)
+if button:
 
-output = backtrack(problem)
-if input3:
+    if input3:
+        # Print the sum
+        st.text(''.join(input1))
+        st.text(''.join(input2))
+        st.text("+ ------")
+        st.text(''.join(input3))
+
+    problem = CspProblem(unique_variables, domains, constraints)
+
+    output = backtrack(problem)
+    if input3:
+        if output:
+            st.text("Solution:")
+            st.text(output)
+        else:
+            st.text("No possible solution")
+
+    # Define the input string
+    input_string = ''.join(input1)+" "+''.join(input2)+" "+''.join(input3)
+
+    # Split the input string into words
+    words = input_string.split()
+
+    # Initialize three variables to store the values
+    variable1_value = ''
+    variable2_value = ''
+    variable3_value = ''
+
+    # If there is a solution
     if output:
-        st.text("Solution:")
-        st.text(output)
-    else:
-        st.text("No possible solution")
-
-# Define the input string
-input_string = ''.join(input1)+" "+''.join(input2)+" "+''.join(input3)
-
-# Split the input string into words
-words = input_string.split()
-
-# Initialize three variables to store the values
-variable1_value = ''
-variable2_value = ''
-variable3_value = ''
-
-# If there is a solution
-if output:
-    # Iterate through the words and get their values from the dictionary
-    for i, word in enumerate(words):
-        for letter in word:
-            variable_value = output.get(letter, letter)
-            if i == 0:
-                variable1_value += str(variable_value)
-            elif i == 1:
-                variable2_value += str(variable_value)
-            elif i == 2:
-                variable3_value += str(variable_value)
+        # Iterate through the words and get their values from the dictionary
+        for i, word in enumerate(words):
+            for letter in word:
+                variable_value = output.get(letter, letter)
+                if i == 0:
+                    variable1_value += str(variable_value)
+                elif i == 1:
+                    variable2_value += str(variable_value)
+                elif i == 2:
+                    variable3_value += str(variable_value)
             
-    # Print the solution
-    st.text(variable1_value)
-    st.text(variable2_value)
-    st.text("--------")
-    st.text(variable3_value)
+        # Print the solution
+        st.text(variable1_value)
+        st.text(variable2_value)
+        st.text("--------")
+        st.text(variable3_value)
