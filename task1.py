@@ -135,7 +135,7 @@ if button and input3:
                     variable3_value += str(variable_value)
             
         # Print the solution
-        st.text("\u00A0\u00A0"+variable1_value)
+        st.text("&nbsp;&nbsp;"+variable1_value)
         st.text("+ "+variable2_value)
         st.text("-------")
         st.text("  "+variable3_value)
