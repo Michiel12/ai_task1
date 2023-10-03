@@ -93,11 +93,12 @@ if input3:
 problem = CspProblem(unique_variables, domains, constraints)
 
 output = backtrack(problem)
-if output:
-    st.text("Solution:")
-    st.text(output)
-else:
-    st.text("No possible solution")
+if input3:
+    if output:
+        st.text("Solution:")
+        st.text(output)
+    else:
+        st.text("No possible solution")
 
 # Define the input string
 input_string = ''.join(input1)+" "+''.join(input2)+" "+''.join(input3)
