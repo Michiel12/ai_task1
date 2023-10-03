@@ -97,7 +97,7 @@ if button and input3:
     if input3:
         # Print the sum
         st.text(" "+''.join(input1))
-        st.text("+",''.join(input2))
+        st.text("+"+''.join(input2))
         st.text("--------")
         st.text(" "+''.join(input3))
 
