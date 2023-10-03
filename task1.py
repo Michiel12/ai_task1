@@ -96,10 +96,10 @@ if button and input3:
 
     if input3:
         # Print the sum
-        st.write("  "+''.join(input1))
-        st.write("+ "+''.join(input2))
+        st.text("  "+''.join(input1))
+        st.text("+ "+''.join(input2))
         st.text("--------")
-        st.write("  "+''.join(input3))
+        st.text("  "+''.join(input3))
 
     problem = CspProblem(unique_variables, domains, constraints)
 
@@ -135,7 +135,7 @@ if button and input3:
                     variable3_value += str(variable_value)
             
         # Print the solution
-        st.write("  "+variable1_value)
+        st.text("  "+variable1_value)
         st.text("+ "+variable2_value)
         st.text("--------")
-        st.write("  "+variable3_value)
+        st.text("  "+variable3_value)
