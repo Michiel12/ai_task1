@@ -8,8 +8,7 @@ st.title("AI task 1 by Michiel Van Loy")
 input1 = tuple(st.text_input("First word: ").upper())
 input2 = tuple(st.text_input("Second word: ").upper())
 input3 = tuple(st.text_input("Third word: ").upper())
-# Make 1 tuple with all letters
-variables = input1+input2+input3
+
 
 # Removes all the duplicates in the tuple by looping though the tuple en returning a unique list
 def remove_duplicates(variables):
@@ -75,6 +74,9 @@ def constraint_add(variables, values):
 button = st.button("Test words")
 
 if button:
+    # Make 1 tuple with all letters
+    variables = input1+input2+input3
+
     # Remove all the duplicated by calling the fuction I made earlier
     unique_variables = remove_duplicates(variables)
     
