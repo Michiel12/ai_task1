@@ -97,11 +97,11 @@ if button and input3:
     if input3:
         # Print the sum
         print_input1 = ''.join(input1)
-        st.markdown(f'<pre>{"&nbsp;&nbsp;&nbsp;&nbsp;" + print_input1}</pre>', unsafe_allow_html=True)
+        st.markdown(f'<pre>{"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + print_input1}</pre>', unsafe_allow_html=True)
         st.text("+ "+''.join(input2))
         st.text("------")
         print_input3 = ''.join(input3)
-        st.markdown(f'<pre>{"&nbsp;&nbsp;&nbsp;&nbsp;" + print_input3}</pre>', unsafe_allow_html=True)
+        st.markdown(f'<pre>{"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + print_input3}</pre>', unsafe_allow_html=True)
 
     problem = CspProblem(unique_variables, domains, constraints)
 
@@ -137,7 +137,7 @@ if button and input3:
                     variable3_value += str(variable_value)
             
         # Print the solution
-        st.markdown(f'<pre>{"&nbsp;&nbsp;&nbsp;&nbsp;" + variable1_value}</pre>', unsafe_allow_html=True)
+        st.markdown(f'<pre>{"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + variable1_value}</pre>', unsafe_allow_html=True)
         st.text("+ "+variable2_value)
         st.text("------")
-        st.markdown(f'<pre>{"&nbsp;&nbsp;&nbsp;&nbsp;" + variable3_value}</pre>', unsafe_allow_html=True)
+        st.markdown(f'<pre>{"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + variable3_value}</pre>', unsafe_allow_html=True)
